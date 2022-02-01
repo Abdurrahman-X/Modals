@@ -16,14 +16,14 @@ for (let i = 0; i < showModal.length; i++) {
    })
 }
 
-// Closing Modal via "&times" button
-closeModalBtn.addEventListener('click', function () {
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');   
-})
-
-// Closing Modal by clicking anywhere outside the Modal
-overlay.addEventListener('click', function () {
+// created a closeModal Function
+const closeModal = function () {
     modal.classList.add('hidden');
     overlay.classList.add('hidden');
-})
+}
+
+// Closing Modal via "&times" button 
+closeModalBtn.addEventListener('click', closeModal)
+
+// Close Modal by clicking outside the Modal
+overlay.addEventListener('click', closeModal)

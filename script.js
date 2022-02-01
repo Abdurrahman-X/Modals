@@ -23,3 +23,7 @@ closeModalBtn.addEventListener('click', function () {
 })
 
 // Closing Modal by clicking anywhere outside the Modal
+overlay.addEventListener('click', function () {
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+})

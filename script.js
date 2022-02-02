@@ -29,3 +29,16 @@ closeModalBtn.addEventListener('click', closeModal)
 
 // Close Modal by clicking outside the Modal
 overlay.addEventListener('click', closeModal)
+
+
+// Handling the "Esc" keypress event
+document.addEventListener('keydown', function (e) {
+    //console.log('A key was pressed');
+    //console.log(e.key)
+
+    if (e.key === "Escape") {
+        if (!modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    }
+})
